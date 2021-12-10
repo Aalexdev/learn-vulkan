@@ -1,0 +1,34 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory `d:/dev/Vulkan/learn'
+echo compile obj/App.o from src/App.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/App.o -c src/App.cpp -I include/ -D DEBUG
+echo compile obj/Buffer.o from src/Buffer.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Buffer.o -c src/Buffer.cpp -I include/ -D DEBUG
+echo compile obj/Camera.o from src/Camera.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Camera.o -c src/Camera.cpp -I include/ -D DEBUG
+echo compile obj/Descriptors.o from src/Descriptors.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Descriptors.o -c src/Descriptors.cpp -I include/ -D DEBUG
+echo compile obj/Device.o from src/Device.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Device.o -c src/Device.cpp -I include/ -D DEBUG
+echo compile obj/GameObject.o from src/GameObject.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/GameObject.o -c src/GameObject.cpp -I include/ -D DEBUG
+echo compile obj/keyboardMovementController.o from src/keyboardMovementController.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/keyboardMovementController.o -c src/keyboardMovementController.cpp -I include/ -D DEBUG
+echo compile obj/main.o from src/main.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/main.o -c src/main.cpp -I include/ -D DEBUG
+echo compile obj/Model.o from src/Model.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Model.o -c src/Model.cpp -I include/ -D DEBUG
+echo compile obj/Pipeline.o from src/Pipeline.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Pipeline.o -c src/Pipeline.cpp -I include/ -D DEBUG
+echo compile obj/Renderer.o from src/Renderer.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Renderer.o -c src/Renderer.cpp -I include/ -D DEBUG
+echo compile obj/SimpleRenderSystem.o from src/SimpleRenderSystem.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/SimpleRenderSystem.o -c src/SimpleRenderSystem.cpp -I include/ -D DEBUG
+echo compile obj/SwapChain.o from src/SwapChain.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/SwapChain.o -c src/SwapChain.cpp -I include/ -D DEBUG
+echo compile obj/Window.o from src/Window.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Window.o -c src/Window.cpp -I include/ -D DEBUG
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -time -std=c++17 obj/*.o -I include/ -L libs/ -o prog -l mingw32 -l glfw3 -lgdi32 -lvulkan-1 -D DEBUG
+echo compiling finish with success
+make.exe: Leaving directory `d:/dev/Vulkan/learn'
+ 
