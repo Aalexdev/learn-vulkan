@@ -12,9 +12,13 @@
 
 TextureImage::TextureImage(Device &device, const std::string &filepath) : device{device}{
     createTextureImage(filepath);
+    createImageView();
+    createImageSampler();
 }
 
 TextureImage::~TextureImage(){
+    vkDestroySampler(device.device(), textureImageSampler, nullptr);
+    vkDestroyImageView(device.device(), textureImageView, nullptr);
     vkDestroyImage(device.device(), textureImage, nullptr);
     vkFreeMemory(device.device(), textureImageMemory, nullptr);
 }
@@ -79,4 +83,49 @@ void TextureImage::createImage(Device &device, uint32_t width, uint32_t height, 
     }
 
     vkBindImageMemory(device.device(), image, imageMemory, 0);
+}
+
+void TextureImage::createImageView(){
+    VkImageViewCreateInfo createInfo{};
+    createInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+    createInfo.image = textureImage;
+    createInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
+    createInfo.format = VK_FORMAT_R8G8B8A8_SRGB;
+
+    createInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+    createInfo.subresourceRange.baseMipLevel = 0;
+    createInfo.subresourceRange.levelCount = 1;
+    createInfo.subresourceRange.baseArrayLayer = 0;
+    createInfo.subresourceRange.layerCount = 1;
+
+    if (vkCreateImageView(device.device(), &createInfo, nullptr, &textureImageView) != VK_SUCCESS)
+        throw std::runtime_error("failed to create image view");
+}
+
+void TextureImage::createImageSampler(){
+    VkSamplerCreateInfo samplerInfo{};
+    samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
+    samplerInfo.magFilter = VK_FILTER_LINEAR;
+    samplerInfo.minFilter = VK_FILTER_LINEAR;
+
+    samplerInfo.addressModeU = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+    samplerInfo.addressModeV = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+    samplerInfo.addressModeW = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+
+    samplerInfo.anisotropyEnable = VK_TRUE;
+    samplerInfo.maxAnisotropy = device.properties.limits.maxSamplerAnisotropy;
+
+    samplerInfo.borderColor = VK_BORDER_COLOR_INT_OPAQUE_BLACK;
+    samplerInfo.unnormalizedCoordinates = VK_FALSE;
+
+    samplerInfo.compareEnable = VK_FALSE;
+    samplerInfo.compareOp = VK_COMPARE_OP_ALWAYS;
+
+    samplerInfo.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+    samplerInfo.mipLodBias = 0.f;
+    samplerInfo.minLod = 0.f;
+    samplerInfo.maxLod = 0.f;
+
+    if (vkCreateSampler(device.device(), &samplerInfo, nullptr, &textureImageSampler) != VK_SUCCESS)
+        throw std::runtime_error("failed to create sampler");
 }
