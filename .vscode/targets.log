@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Thu Dec 09 19:12:05 2021
+# Make data base, printed on Sat Dec 11 10:50:03 2021
 
 # Variables
 
@@ -36,7 +36,7 @@ HOMEDRIVE = C:
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # makefile
-CURDIR := d:/dev/Vulkan/learn
+CURDIR := d:/dev/Vulkan/texture test
 # default
 SHELL := sh.exe
 # environment
@@ -64,12 +64,12 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-35d5bd5e-f9a4-4be6-821f-46f03a62820b-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-e1a526dd-4231-48e7-ac16-aea89c2a5163-sock
 # environment
-VSCODE_CWD = D:\programs\Microsoft VS Code
+VSCODE_CWD = D:\dev\Vulkan\texture test
 # environment
-PATH = D:\vulkan\Bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\MinGW\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin;C:\Users\aalex\AppData\Local\bin\NASM;D:\golink;D:\programs\CMake\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aalex\AppData\Local\GitHubDesktop\bin;C:\Users\aalex\.dotnet\tools;c:\python27;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin;D:\programs\Microso 
-ft VS Code\bin;D:\vulkan\Bin;
+PATH = D:\vulkan\Bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\MinGW\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin;C:\Users\aalex\AppData\Local\bin\NASM;D:\golink;D:\programs\CMake\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aalex\AppData\Local\GitHubDesktop\bin;C:\Users\aalex\.dotnet\tools;c:\python27;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin;D:\programs\Mic 
+rosoft VS Code\bin;D:\vulkan\Bin;
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
@@ -93,7 +93,7 @@ VK_SDK_PATH = D:\vulkan
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_25404_GKNNGQYGGGLDEOKS
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12524_KOVJLLQWHKWAGPCX
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -109,12 +109,12 @@ USERNAME = aalex
 # environment
 PUBLIC = C:\Users\Public
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extens 
-ions/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/ex 
+tensions/node/extensionHostProcess
 # makefile (from `makefile', line 9)
 DEFINES = -D DEBUG
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\aalex\AppData\Roaming\Code\CachedData\ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
+VSCODE_CODE_CACHE_PATH = C:\Users\aalex\AppData\Roaming\Code\CachedData\7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
@@ -125,8 +125,7 @@ LOGONSERVER = \\LAPTOP-63807G6E
 ONEDRIVECONSUMER = C:\Users\aalex\OneDrive
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# enviro 
-nment
+# environment
 USERDOMAIN = LAPTOP-63807G6E
 # default
 MAKE = $(MAKE_COMMAND)
@@ -149,8 +148,8 @@ PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 LOCALAPPDATA = C:\Users\aalex\AppData\Local
 # environment
-PSMODULEPATH = C:\Program 
- Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Pro 
+gram Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # environment
@@ -164,12 +163,11 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
 # environment
 OS = Windows_NT
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\04a077b3923635bc5ad709d9f9966e6c-1.62.3-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\04a077b3923635bc5ad709d9f9966e6c-1.63.0-main-sock
 # environment
 HOMEPATH = \Users\aalex
 # environment
-COMMONPROGRAMFILES(X86) = C:\Prog 
-ram Files (x86)\Common Files
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 PROMPT = $P$G
 # makefile (from `makefile', line 2)
@@ -191,8 +189,8 @@ APPDATA = C:\Users\aalex\AppData\Roaming
 # environment
 TEMP = C:\Users\aalex\AppData\Local\Temp
 # environment
-COMSPEC = C:\WINDOWS\ 
-system32\cmd.exe
+COMSPEC = C:\WIND 
+OWS\system32\cmd.exe
 # default
 MAKEFILES := 
 # automatic
@@ -216,8 +214,7 @@ PROCESSOR_REVISION = 1801
 # environment
 VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1
 # environment
-MAKELEVEL  
-:= 0
+MAKELEVEL := 0
 # environment
 VULKAN_SDK = D:\vulkan
 # environment
@@ -227,7 +224,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 25404
+VSCODE_PID = 12524
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-63807G6E
 # variable set hash-table stats:
@@ -239,55 +236,58 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-63807G6E
 
 # Directories
 
-# C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin: could not be st 
-at'd.
+# C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin: could not be stat'd.
 # src/*/*: could not be stat'd.
+# src/ECS/components (key d:/dev/Vulkan/texture test/src/ECS/components, mtime 1639216185): 3 files, no impossibilities.
 # C:\Users\aalex\.dotnet\tools: could not be stat'd.
-# src/Buffer.cpp (key d:/dev/Vulkan/learn/src/Buffer.cpp, mtime 1638970399): could not be opened.
+# src/Buffer.cpp (key d:/dev/Vulkan/texture test/src/Buffer.cpp, mtime 1638970399): could not be opened.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1635674840): 32 files, no impossibilities.
-# C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1622913728): 155 files, no impossibilities.
-# . (key d:/dev/Vulkan/learn, mtime 1639073110): 11 files, no impossibilities.
-# src/keyboardMovementController.cpp (key d:/dev/Vulkan/learn/src/keyboardMovementController.cpp, mtime 1638913568): could not be opened.
-# src/App.cpp (key d:/dev/Vulkan/learn/src/App.cpp, mtime 1639073141): could not be opened.
-# src/SimpleRenderSystem.cpp (key d:/dev/Vulkan/learn/src/SimpleRenderSystem.cpp, mtime 1639073281): could not be opened.
+# C:\WINDOWS\System32\Wbem (key C:/WINDOWS/Sys 
+tem32/Wbem, mtime 1622913728): 155 files, no impossibilities.
+# . (key d:/dev/Vulkan/texture test, mtime 1639216185): 12 files, no impossibilities.
+# src/keyboardMovementController.cpp (key d:/dev/Vulkan/texture test/src/keyboardMovementController.cpp, mtime 1638913568): could not be opened.
+# src/App.cpp (key d:/dev/Vulkan/texture test/src/App.cpp, mtime 1639216133): could not be opened.
+# src/SimpleRenderSystem.cpp (key d:/dev/Vulkan/texture test/src/SimpleRenderSystem.cpp, mtime 1639173642): could not be opened.
+# src/ECS/systems (key d:/dev/Vulkan/texture test/src/ECS/systems, mtime 1639216185): 3 files, no impossibilities.
 # C:\MinGW\bin\: could not be stat'd.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1632837983): 8 files, no impossibilities.
-# D:\de 
-v\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin (key D:/dev/compilers/c-cpp/winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1/mingw32/bin, mtime 1633028936): 83 files, no impossibilities.
-# src/GameObject.cpp (key d:/dev/Vulkan/learn/src/GameObject.cpp, mtime 1638969321): could not be opened.
+# D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin (key D:/dev/compilers/c-cpp/winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1/mingw32/bin, mtime 1633028936): 83 files, no impossibilities.
+# src/G 
+ameObject.cpp (key d:/dev/Vulkan/texture test/src/GameObject.cpp, mtime 1638969321): could not be opened.
 # C:\Users\aalex\AppData\Local\GitHubDesktop\bin: could not be stat'd.
-# C:\Users\aalex\AppData\Local\Microsoft\WindowsApps (key C:/Users/aalex/AppData/Local/Microsoft/WindowsApps, mtime 1639071385): 41 files, no impossibilities.
-# src/Camera.cpp (key d:/dev/Vulkan/learn/src/Camera.cpp, mtime 1638910266): could not be opened.
-# src/Pipeline.cpp (key d:/dev/Vulkan/learn/src/Pipeline.cpp, mtime 1638814794): could not be opened.
+# C:\Users\aalex\AppData\Local\Microsoft\WindowsApps (key C:/Users/aalex/AppData/Local/Microsoft/WindowsApps, mtime 1639213539): 41 files, no impossibilities.
+# src/ECS (key d:/dev/Vulkan/texture test/src/ECS, mtime 1639216185): 4 files, no impossibilities.
+# src/Camera.cpp (key d:/dev/Vulkan/texture test/src/Camera.cpp, mtime 1638910266): could not be opened.
+# src/Pipeline.cpp (key d:/dev/Vulkan/texture test/src/Pipeline.cpp, mtime 1639166658): could not be opened.
 # D:\golink (key D:/golink, mtime 1614434330): 6 files, no impossibilities.
 # D:\vulkan\Bin (key D:/vulkan/Bin, mtime 1636735861): 47 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
-# src/Device.cpp (key d:/dev/Vulkan/learn/sr 
-c/Device.cpp, mtime 1638613368): could not be opened.
-# C:\Program Files (x86)\Common Files\Oracle\Java\javapath (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1630335095): 5 files, no impossibilities.
+# src/Device.cpp (key d:/dev/Vulkan/texture test/src/Device.cpp, mtime 1638613368): could not be opened.
+# C:\Program Files (x86)\Common Files\Oracle\Java\javapa 
+th (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1630335095): 5 files, no impossibilities.
 # D:\programs\CMake\bin (key D:/programs/CMake/bin, mtime 1619537534): 8 files, no impossibilities.
-# src (key d:/dev/Vulkan/learn/src, mtime 1638994120): 16 files, no impossibilities.
-# src/Model.cpp (key d:/dev/Vulkan/learn/src/Model.cpp, mtime 1638993925): could not be opened.
-# src/D 
-escriptors.cpp (key d:/dev/Vulkan/learn/src/Descriptors.cpp, mtime 1638994150): could not be opened.
+# src (key d:/dev/Vulkan/texture test/src, mtime 1639216185): 17 files, no impossibilities.
+# src/Model.cpp (key d:/dev/Vulkan/texture test/src/Model.cpp, mtime 1639160591): could not be opened.
+# src/Descriptors.cpp (key d:/dev/Vulkan/texture test/src/Descriptors.cpp, mtime 1638994150): could not be opened.
 # src/*: could not be stat'd.
 # C:\WINDOWS (key C:/WINDOWS, mtime 1638018440): 122 files, no impossibilities.
-# src/SwapChain.cpp (key d:/dev/Vulkan/learn/src/SwapChain.cpp, mtime 1638829140): could not be opened.
+# src/SwapChain.cpp (key d:/dev/Vulkan/texture test/src/SwapChain.cpp, mtime 1638829140): could not be opened.
 # C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin (key C:/Program Files/AdoptOpenJDK/jdk-11.0.9.101-hotspot/bin, mtime 1609271408): 126 files, no impossibilities.
-# src/Renderer.cpp (key d 
-:/dev/Vulkan/learn/src/Renderer.cpp, mtime 1638829583): could not be opened.
+# src/Renderer.cpp (key d:/dev/Vulkan/texture test/src/Renderer.cpp, mtime 1638829583): could not be opened 
+.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1609250127): 8 files, no impossibilities.
-# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1638736201): 2994 files, no impossibilities.
-# D:\programs\Microsoft VS Code\bin (key D:/programs/Microsoft VS Code/bin, mtime 1637265276): 4 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1639213548): 2994 files, no impossibilities.
+# D:\programs\Microsoft VS Code\bin (key D:/programs/Microsoft VS Code/bin, mtime 1639072732): 4 files, no impossibilities.
 # c:\python27 (key c:/python27, mtime 1622120543): 18 files, no impossibilities.
-# src/main.cpp (key d:/de 
-v/Vulkan/learn/src/main.cpp, mtime 1638563905): could not be opened.
-# C:\Users\aalex\AppData\Local\bin\NASM (key C:/Users/aalex/AppData/Local/bin/NASM, mtime 1614432989): 18 files, no impossibilities.
-# src/Window.cpp (key d:/dev/Vulkan/learn/src/Window.cpp, mtime 1638642877): could not be opened.
-# D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin (key D:/cmake-3.19.3-win64-x64/cmake-3.19.3-win64-x64/bin, mtime 1611079901): 7 files, no impossibilities.
-# C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1619552893): 5 files, no impossibilities.
+# src/main.cpp (key d:/dev/Vulkan/texture test/src/main.cpp, mtime 1639085033): could not be opened. 
 
-# 3714 files, no impossibilities in 41 directories.
+# C:\Users\aalex\AppData\Local\bin\NASM (key C:/Users/aalex/AppData/Local/bin/NASM, mtime 1614432989): 18 files, no impossibilities.
+# src/Window.cpp (key d:/dev/Vulkan/texture test/src/Window.cpp, mtime 1638642877): could not be opened.
+# D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin (key D:/cmake-3.19.3-win64-x64/cmake-3.19.3-win64-x64/bin, mtime 1611079901): 7 files, no impossibilities.
+# C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1619552893): 5 files, no  
+impossibilities.
+
+# 3726 files, no impossibilities in 44 directories.
 
 # Implicit Rules
 
@@ -304,9 +304,9 @@ obj/%.o: src/*/%.cpp
 	
 
 obj/%.o: src/*/*/%.cpp
-#  comm 
-ands to execute (from `makefile', line 22):
-	@echo compile $@ from $<
+#  commands to execute (from `makefile', line 22):
+	@echo compile $@ 
+ from $<
 	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 	
 
@@ -328,7 +328,12 @@ clear:
 	@del obj\*.o
 	
 
- 
+# Not a target:
+obj/ECS_RenderSys.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 all: prog
 #  Command-line target.
 #  Implicit rule search has been done.
@@ -346,10 +351,10 @@ obj/GameObject.o:
 
 # Not a target:
 obj/Camera.o:
-#  Implicit rule search has not been done.
+#  Implicit rul 
+e search has not been done.
 #  Modification time never checked.
-#  File has not been u 
-pdated.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -358,15 +363,22 @@ pdated.
 #  File has not been updated.
 
 # Not a target:
-obj/main.o:
+obj/ECS_Transform.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
+obj/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been update 
+d.
+
+# Not a target:
 src/App.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-12-09 19:05:41
+#  Last modified 2021-12-11 10:48:53
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -387,13 +399,13 @@ obj/Model.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-prog: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj 
-/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o
+prog: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# variable set hash-table stats:
+# variable set ha 
+sh-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  commands to execute (from `makefile', line 26):
 	@$(CXX) -time -std=$(STD_VERSION) obj/*.o -I $(INCLUDE) -L $(LIB) -o $(EXEC) $(CFLAGS) $(DEFINES)
@@ -401,8 +413,7 @@ prog: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/Gam
 	
 
 # Not a target:
-obj/Ren 
-derer.o:
+obj/Renderer.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -411,7 +422,8 @@ derer.o:
 obj/Window.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
-#  File has not been updated.
+#  File has 
+ not been updated.
 
 # Not a target:
 obj/Pipeline.o:
@@ -423,8 +435,7 @@ obj/Pipeline.o:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
-#  Fi 
-le has not been updated.
+#  File has not been updated.
 
 # Not a target:
 obj/Device.o:
@@ -438,13 +449,13 @@ obj/Descriptors.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-dbg: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o o 
-bj/SwapChain.o obj/Window.o
+dbg: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 30):
-	$(CXX) -std=$(STD_VERSION) -g3 $(SRC) -I $(INCLUDE) -L $(LIB) -o $(EXEC) $(CFLAGS) $(DEFINES)
+	$(CXX) -st 
+d=$(STD_VERSION) -g3 $(SRC) -I $(INCLUDE) -L $(LIB) -o $(EXEC) $(CFLAGS) $(DEFINES)
 	
 
 # Not a target:
@@ -455,9 +466,8 @@ obj/keyboardMovementController.o:
 
 obj/App.o: src/App.cpp
 #  Implicit rule search has been done.
-#  I 
-mplicit/static pattern stem: `App'
-#  Last modified 2021-12-09 19:03:47
+#  Implicit/static pattern stem: `App'
+#  Last modified 2021-12-11 10:46:58
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -465,7 +475,8 @@ mplicit/static pattern stem: `App'
 # automatic
 # % := 
 # automatic
-# * := App
+# *  
+:= App
 # automatic
 # + := src/App.cpp
 # automatic
@@ -480,8 +491,7 @@ mplicit/static pattern stem: `App'
 # Load=8/32=25%, Rehash=0, Collisions=2/18=11%
 #  commands to execute (from `makefile', line 14):
 	@echo compile $@ from $<
-	@$(C 
-XX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
+	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 	
 
 # Not a target:
@@ -504,7 +514,8 @@ info:
 	@echo -----------------------------------------------------
 	@echo compiling info :                
 	@echo 	compiler                     : $(CXX)
-	@echo 	compiler standart version    : $(STD_VERSION)
+	@echo 	compiler standart version    :  
+$(STD_VERSION)
 	@echo 	include path                 : $(INCLUDE)
 	@echo 	flags                        : $(FLAGS)
 	@echo 	libs directory               : $(LIB)
@@ -513,8 +524,7 @@ info:
 	
 
 # files hash-table stats:
-# Load=23/1024=2% 
-, Rehash=0, Collisions=3/67=4%
+# Load=25/1024=2%, Rehash=0, Collisions=3/73=4%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -526,6 +536,6 @@ info:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Dec 09 19:12:05 2021
+# Finished Make data base on Sat Dec 11 10:50:03 2021
 
  

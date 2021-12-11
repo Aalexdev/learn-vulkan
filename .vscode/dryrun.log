@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make.exe: Entering directory `d:/dev/Vulkan/learn'
+make.exe: Entering directory `d:/dev/Vulkan/texture test'
 echo compile obj/App.o from src/App.cpp
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/App.o -c src/App.cpp -I include/ -D DEBUG
 echo compile obj/Buffer.o from src/Buffer.cpp
@@ -28,7 +28,11 @@ echo compile obj/SwapChain.o from src/SwapChain.cpp
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/SwapChain.o -c src/SwapChain.cpp -I include/ -D DEBUG
 echo compile obj/Window.o from src/Window.cpp
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Window.o -c src/Window.cpp -I include/ -D DEBUG
+echo compile obj/ECS_Transform.o from src/ECS/components/ECS_Transform.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ECS_Transform.o -c src/ECS/components/ECS_Transform.cpp -I include/ -D DEBUG
+echo compile obj/ECS_RenderSys.o from src/ECS/systems/ECS_RenderSys.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ECS_RenderSys.o -c src/ECS/systems/ECS_RenderSys.cpp -I include/ -D DEBUG
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -time -std=c++17 obj/*.o -I include/ -L libs/ -o prog -l mingw32 -l glfw3 -lgdi32 -lvulkan-1 -D DEBUG
 echo compiling finish with success
-make.exe: Leaving directory `d:/dev/Vulkan/learn'
+make.exe: Leaving directory `d:/dev/Vulkan/texture test'
  
