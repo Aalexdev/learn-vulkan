@@ -54,7 +54,7 @@ void Renderer::createPipeline(VkRenderPass renderPass){
     pipelineConfig.renderPass = renderPass;
     pipelineConfig.pipelineLayout = pipelineLayout;
 
-    pipeline = std::make_unique<Pipeline>("D:\\dev\\Vulkan\\ECS test\\resources\\shaders\\shader.vert.spv", "D:\\dev\\Vulkan\\ECS test\\resources\\shaders\\shader.frag.spv", device, pipelineConfig);
+    pipeline = std::make_unique<Pipeline>("D:\\dev\\Vulkan\\texture test\\resources\\shaders\\shader.vert.spv", "D:\\dev\\Vulkan\\texture test\\resources\\shaders\\shader.frag.spv", device, pipelineConfig);
 }
 
 void Renderer::renderEntitys(FrameInfo &info){

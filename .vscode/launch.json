@@ -8,7 +8,7 @@
             "name": "g++.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "D:\\dev\\Vulkan\\ECS test\\prog.exe",
+            "program": "D:\\dev\\Vulkan\\texture test\\prog.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

@@ -1,4 +1,5 @@
 #include "KeyboardMovementController.hpp"
+#include "TextureImage.hpp"
 #include "ECS/ECS.hpp"
 #include "Camera.hpp"
 #include "Buffer.hpp"
@@ -32,6 +33,7 @@ App::App(){
         .setMaxSets(SwapChain::MAX_FRAMES_IN_FLIGHT)
         .addPoolSize(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, SwapChain::MAX_FRAMES_IN_FLIGHT)
         .build();
+    
     
 }
 
@@ -73,6 +75,8 @@ void App::run(){
     // camera.setViewDirection(glm::vec3(0.f), glm::vec3(0.5f, 0.f, 1.f));
     auto currentTime = std::chrono::high_resolution_clock::now();
     auto startTime = std::chrono::high_resolution_clock::now();
+    
+    // test texture
 
     // while the window shouldn't close, we update the events of glfw 
     while (!window.shouldClose()){
@@ -111,11 +115,12 @@ void App::run(){
             renderer.endFrame();
         }
     }
+
     vkDeviceWaitIdle(device.device());
 }
 
 void App::loadGameObjects(){
-    std::shared_ptr<VKE::Model> model = VKE::Model::createModelFromFile(device, "D:\\dev\\Vulkan\\ECS test\\resources\\models\\smooth_vase.obj");
+    std::shared_ptr<VKE::Model> model = VKE::Model::createModelFromFile(device, "D:\\dev\\Vulkan\\texture test\\resources\\models\\smooth_vase.obj");
 
     auto entity = coordinator.CreateEntity();
     ECS::Components::Transform transform{};

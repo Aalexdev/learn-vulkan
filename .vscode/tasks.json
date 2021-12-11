@@ -8,8 +8,9 @@
                 "dbg"
             ],
             "options": {
-                "cwd": "D:\\dev\\Vulkan\\ECS test"
+                "cwd": "D:\\dev\\Vulkan\\texture test"
             },
+            
             "problemMatcher": [
                 "$gcc"
             ],
