@@ -97,7 +97,7 @@ void App::run(){
             // update
             GlobalUBO ubo{};
             ubo.projectionView = camera.getProjection() * camera.getView();
-            // ubo.lightPositon = viewerGameObject.transform.translation;
+            ubo.lightPositon = viewerGameObject.transform.translation;
 
             // send ubo to the uniform buffer
             uboBuffers[frameIndex]->writeToBuffer(&ubo);
@@ -125,22 +125,11 @@ void App::loadGameObjects(){
     coordinator.AddComponent(entity, ECS::Components::Model{model});
     coordinator.AddComponent(entity, transform);
 
-    // GameObject object = GameObject::createGameObject();
-    // object.model = model;
-    // object.transform.translation = {0.f, 0.f, .5f};
-    // object.transform.scale = {3.f, 1.5f, 3.f};
-    // gameObjects.emplace(object.getId(), std::move(object));
-
-    // GameObject object2 = GameObject::createGameObject();
-    // object2.model = model;
-    // object2.transform.translation = {0.f, 0.f, 1.5f};
-    // object2.transform.scale = {3.f, 1.5f, 3.f};
-    // gameObjects.emplace(object2.getId(), std::move(object2));
-
-    // std::shared_ptr<VKE::Model> quadModel = VKE::Model::createModelFromFile(device, "D:\\dev\\Vulkan\\ECS test\\resources\\models\\quad.obj");
-    // GameObject quad = GameObject::createGameObject();
-    // quad.model = quadModel;
-    // quad.transform.translation = {0.f, 0.5f, 0.f};
-    // quad.transform.scale = {10.5f, 10.5f, 10.5f};
-    // gameObjects.emplace(quad.getId(), std::move(quad));
+    auto vase2 = coordinator.CreateEntity();
+    ECS::Components::Transform transform2{};
+    transform2.translation = {0.f, 0.f, 1.5f};
+    transform2.scale = {3.f, 1.5f, 3.f};
+    
+    coordinator.AddComponent(vase2, ECS::Components::Model{model});
+    coordinator.AddComponent(vase2, transform2);
 }

@@ -64,7 +64,9 @@ void Renderer::renderEntitys(FrameInfo &info){
 
     for (auto &entity : mEntities){
         auto &model = info.coordinator.GetComponent<Components::Model>(entity);
+        
         if (model.model == nullptr) continue;
+        if (model.hide) continue;
 
         auto &transform = info.coordinator.GetComponent<Components::Transform>(entity);
 

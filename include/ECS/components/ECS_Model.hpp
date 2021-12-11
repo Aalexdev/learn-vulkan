@@ -10,6 +10,7 @@ namespace ECS{
 
         struct Model{
             std::shared_ptr<VKE::Model> model{nullptr};
+            bool hide{false};
         };
 
     } // namespace Components
