@@ -34,7 +34,6 @@ class App{
 
         Window window{WIDTH, HEIGHT, "learn vulkan"};
         Device device{window};
-        TextureImage texture{device, "D:\\dev\\Vulkan\\texture test\\resources\\images\\grass.jpg"};
         Renderer renderer{window, device};
 
         std::unique_ptr<DescriptorPool> globalPool{};

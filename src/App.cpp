@@ -77,6 +77,7 @@ void App::run(){
     auto startTime = std::chrono::high_resolution_clock::now();
     
     // test texture
+    TextureImage texture{device, "D:\\dev\\Vulkan\\texture test\\resources\\images\\grass.jpg"};
 
     // while the window shouldn't close, we update the events of glfw 
     while (!window.shouldClose()){
