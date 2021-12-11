@@ -19,7 +19,6 @@ void SingleTimeCommandBuffer::begin(){
     allocInfo.commandPool = device.getCommandPool();
     allocInfo.commandBufferCount = 1;
 
-    VkCommandBuffer commandBuffer;
     if (vkAllocateCommandBuffers(device.device(), &allocInfo, &commandBuffer) != VK_SUCCESS)
         throw std::runtime_error("failed to allocate command buffer");
 
@@ -28,12 +27,10 @@ void SingleTimeCommandBuffer::begin(){
     beginInfo.flags = VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT;
 
     vkBeginCommandBuffer(commandBuffer, &beginInfo);
-    std::cout << "begin" << std::endl;
 }
 
 void SingleTimeCommandBuffer::end(){
     vkEndCommandBuffer(commandBuffer);
-    std::cout << "end" << std::endl;
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
@@ -79,6 +76,7 @@ void SingleTimeCommandBuffer::transitionImageLayout(Device &device, VkImage imag
 
         sourceStage = VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT;
         destinationStage = VK_PIPELINE_STAGE_TRANSFER_BIT;
+
     } else if (oldLayout == VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL && newLayout == VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL) {
         barrier.srcAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
         barrier.dstAccessMask = VK_ACCESS_SHADER_READ_BIT;
@@ -103,19 +101,19 @@ void SingleTimeCommandBuffer::copyBufferToImage(Device &device, VkBuffer buffer,
     SingleTimeCommandBuffer commandBuffer(device);
 
     VkBufferImageCopy region{};
-        region.bufferOffset = 0;
-        region.bufferRowLength = 0;
-        region.bufferImageHeight = 0;
-        region.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-        region.imageSubresource.mipLevel = 0;
-        region.imageSubresource.baseArrayLayer = 0;
-        region.imageSubresource.layerCount = 1;
-        region.imageOffset = {0, 0, 0};
-        region.imageExtent = {
-            width,
-            height,
-            1
-        };
+    region.bufferOffset = 0;
+    region.bufferRowLength = 0;
+    region.bufferImageHeight = 0;
+    region.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+    region.imageSubresource.mipLevel = 0;
+    region.imageSubresource.baseArrayLayer = 0;
+    region.imageSubresource.layerCount = 1;
+    region.imageOffset = {0, 0, 0};
+    region.imageExtent = {
+        width,
+        height,
+        1
+    };
 
     vkCmdCopyBufferToImage(commandBuffer.getCommandBuffer(), buffer, image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &region);
 }
