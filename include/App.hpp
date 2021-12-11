@@ -17,25 +17,25 @@
 #include <vulkan/vulkan.h>
 
 class App{
-    static constexpr int WIDTH = 720;
-    static constexpr int HEIGHT = 720;
+	static constexpr int WIDTH = 720;
+	static constexpr int HEIGHT = 720;
 
-    public:
-        App();
-        ~App();
+	public:
+		App();
+		~App();
 
-        App(const App&) = delete;
-        App& operator=(const App&) = delete;
+		App(const App&) = delete;
+		App& operator=(const App&) = delete;
 
-        void run();
-    
-    private:
-        void loadGameObjects();
+		void run();
+	
+	private:
+		void loadGameObjects();
 
-        Window window{WIDTH, HEIGHT, "learn vulkan"};
-        Device device{window};
-        Renderer renderer{window, device};
+		Window window{WIDTH, HEIGHT, "learn vulkan"};
+		Device device{window};
+		Renderer renderer{window, device};
 
-        std::unique_ptr<DescriptorPool> globalPool{};
-        ECS::Coordinator coordinator{};
+		std::unique_ptr<DescriptorPool> globalPool{};
+		ECS::Coordinator coordinator{};
 };

@@ -64,7 +64,7 @@
 
 // void SimpleRenderSystem::renderGameObjects(FrameInfo &info){
 //     pipeline->bind(info.commandBuffer);
-    
+	
 //     vkCmdBindDescriptorSets(info.commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &info.globalDescriptorSet, 0, nullptr);
 
 //     for (auto &kv : info.gameObjects){

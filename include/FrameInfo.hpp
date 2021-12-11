@@ -8,10 +8,10 @@
 #include <vulkan/vulkan.h>
 
 struct FrameInfo{
-    int frameIndex;
-    float deltaTime;
-    VkCommandBuffer commandBuffer;
-    Camera &camera;
-    VkDescriptorSet globalDescriptorSet;
-    ECS::Coordinator &coordinator;
+	int frameIndex;
+	float deltaTime;
+	VkCommandBuffer commandBuffer;
+	Camera &camera;
+	VkDescriptorSet globalDescriptorSet;
+	ECS::Coordinator &coordinator;
 };

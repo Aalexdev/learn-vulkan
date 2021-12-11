@@ -5,12 +5,12 @@
 class Buffer {
  public:
   Buffer(
-      Device& device,
-      VkDeviceSize instanceSize,
-      uint32_t instanceCount,
-      VkBufferUsageFlags usageFlags,
-      VkMemoryPropertyFlags memoryPropertyFlags,
-      VkDeviceSize minOffsetAlignment = 1);
+	  Device& device,
+	  VkDeviceSize instanceSize,
+	  uint32_t instanceCount,
+	  VkBufferUsageFlags usageFlags,
+	  VkMemoryPropertyFlags memoryPropertyFlags,
+	  VkDeviceSize minOffsetAlignment = 1);
   ~Buffer();
  
   Buffer(const Buffer&) = delete;

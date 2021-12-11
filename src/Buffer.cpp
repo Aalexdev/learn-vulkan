@@ -22,23 +22,23 @@
  */
 VkDeviceSize Buffer::getAlignment(VkDeviceSize instanceSize, VkDeviceSize minOffsetAlignment) {
   if (minOffsetAlignment > 0) {
-    return (instanceSize + minOffsetAlignment - 1) & ~(minOffsetAlignment - 1);
+	return (instanceSize + minOffsetAlignment - 1) & ~(minOffsetAlignment - 1);
   }
   return instanceSize;
 }
  
 Buffer::Buffer(
-    Device &device,
-    VkDeviceSize instanceSize,
-    uint32_t instanceCount,
-    VkBufferUsageFlags usageFlags,
-    VkMemoryPropertyFlags memoryPropertyFlags,
-    VkDeviceSize minOffsetAlignment)
-    : lveDevice{device},
-      instanceSize{instanceSize},
-      instanceCount{instanceCount},
-      usageFlags{usageFlags},
-      memoryPropertyFlags{memoryPropertyFlags} {
+	Device &device,
+	VkDeviceSize instanceSize,
+	uint32_t instanceCount,
+	VkBufferUsageFlags usageFlags,
+	VkMemoryPropertyFlags memoryPropertyFlags,
+	VkDeviceSize minOffsetAlignment)
+	: lveDevice{device},
+	  instanceSize{instanceSize},
+	  instanceCount{instanceCount},
+	  usageFlags{usageFlags},
+	  memoryPropertyFlags{memoryPropertyFlags} {
   alignmentSize = getAlignment(instanceSize, minOffsetAlignment);
   bufferSize = alignmentSize * instanceCount;
   device.createBuffer(bufferSize, usageFlags, memoryPropertyFlags, buffer, memory);
@@ -71,8 +71,8 @@ VkResult Buffer::map(VkDeviceSize size, VkDeviceSize offset) {
  */
 void Buffer::unmap() {
   if (mapped) {
-    vkUnmapMemory(lveDevice.device(), memory);
-    mapped = nullptr;
+	vkUnmapMemory(lveDevice.device(), memory);
+	mapped = nullptr;
   }
 }
  
@@ -89,11 +89,11 @@ void Buffer::writeToBuffer(void *data, VkDeviceSize size, VkDeviceSize offset) {
   assert(mapped && "Cannot copy to unmapped buffer");
  
   if (size == VK_WHOLE_SIZE) {
-    memcpy(mapped, data, bufferSize);
+	memcpy(mapped, data, bufferSize);
   } else {
-    char *memOffset = (char *)mapped;
-    memOffset += offset;
-    memcpy(memOffset, data, size);
+	char *memOffset = (char *)mapped;
+	memOffset += offset;
+	memcpy(memOffset, data, size);
   }
 }
  
@@ -147,9 +147,9 @@ VkResult Buffer::invalidate(VkDeviceSize size, VkDeviceSize offset) {
  */
 VkDescriptorBufferInfo Buffer::descriptorInfo(VkDeviceSize size, VkDeviceSize offset) {
   return VkDescriptorBufferInfo{
-      buffer,
-      offset,
-      size,
+	  buffer,
+	  offset,
+	  size,
   };
 }
  
