@@ -115,7 +115,7 @@ namespace VKE{
 		return std::make_unique<Model>(device, builder);
 	}
 
-	void Model::Builder::loadModel(const std::string &filepath){
+	void Model::Builder::loadModel(const std::string &filepath, glm::vec3 color){
 		tinyobj::attrib_t attrib;
 		std::vector<tinyobj::shape_t> shapes;
 		std::vector<tinyobj::material_t> materials;
@@ -141,12 +141,14 @@ namespace VKE{
 						attrib.vertices[3 * index.vertex_index + 1],
 						attrib.vertices[3 * index.vertex_index + 2],
 					};
-
-					vertex.color = {
-						attrib.colors[3 * index.vertex_index + 0],
-						attrib.colors[3 * index.vertex_index + 1],
-						attrib.colors[3 * index.vertex_index + 2],
-					};
+					if (color == MODEL_NON_CUSTOM_COLOR)
+						vertex.color = {
+							attrib.colors[3 * index.vertex_index + 0],
+							attrib.colors[3 * index.vertex_index + 1],
+							attrib.colors[3 * index.vertex_index + 2],
+						};
+					else
+						vertex.color = color;
 				}
 
 				if (index.normal_index >= 0) {

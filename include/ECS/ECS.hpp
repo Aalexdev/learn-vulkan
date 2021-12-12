@@ -115,7 +115,8 @@ namespace ECS{
             template<typename T> void RegisterComponent(){
                 const char* typeName = typeid(T).name();
 
-                assert(_ComponentTypes.find(typeName) == _ComponentTypes.end() && "Registering component type more than once.");
+				if (_ComponentTypes.find(typeName) != _ComponentTypes.end())
+					throw std::runtime_error("Registering component type more than once.");
 
                 // Add this component type to the component type map
                 _ComponentTypes.insert({typeName, _NextComponentType});
@@ -130,7 +131,8 @@ namespace ECS{
             template<typename T> ComponentType GetComponentType(){
                 const char* typeName = typeid(T).name();
 
-                assert(_ComponentTypes.find(typeName) != _ComponentTypes.end() && "Component not registered before use.");
+				if (_ComponentTypes.find(typeName) == _ComponentTypes.end())
+					throw std::runtime_error("Component not registered before use.");
 
                 // Return this component's type - used for creating signatures
                 return _ComponentTypes[typeName];
@@ -176,7 +178,9 @@ namespace ECS{
             // Convenience function to get the statically casted pointer to the ComponentArray of type T.
             template<typename T> std::shared_ptr<ComponentArray<T>> GetComponentArray(){
                 const char* typeName = typeid(T).name();
-                assert(_ComponentTypes.find(typeName) != _ComponentTypes.end() && "Component not registered before use.");
+				if (_ComponentTypes.find(typeName) == _ComponentTypes.end())
+					throw std::runtime_error("Component not registered before use.");
+
                 return std::static_pointer_cast<ComponentArray<T>>(_componentArrays[typeName]);
             }
     };
@@ -195,7 +199,8 @@ namespace ECS{
              * @return Entity id
              */
             Entity create(){
-                assert(_livingEntityCount < MAX_ENTITIES && "Too many entites in existence.");
+				if (_livingEntityCount >= MAX_ENTITIES)
+					throw std::runtime_error("too many entities in existence");
 
                 // take the fisrt available id from the available entity queue
                 Entity id = _availablesEntities.front();
@@ -211,7 +216,8 @@ namespace ECS{
              * @param entity the entity to destroy
              */
             void destroy(Entity entity){
-                assert(entity < MAX_ENTITIES && "Entiity out of range.");
+				if (entity >= MAX_ENTITIES)
+					throw std::runtime_error("Entity out of range");
 
                 // reset the entity's components
                 _signatures[entity].reset();
@@ -227,7 +233,9 @@ namespace ECS{
              * @param signature the new signature state of the entity
              */
             void setSignature(Entity entity, Signature signature){
-                assert(entity < MAX_ENTITIES && "Entity out of range.");
+				if (entity >= MAX_ENTITIES)
+					throw std::runtime_error("Entity out of range");
+
                 _signatures[entity] = signature;
             }
 
@@ -237,7 +245,9 @@ namespace ECS{
              * @return the signature of the entity as a bitfield with the size of EntityManager::MAX_COMPONENT
              */
             Signature getSignature(Entity entity){
-                assert(entity < MAX_ENTITIES && "Entity out of range.");
+				if (entity >= MAX_ENTITIES)
+					throw std::runtime_error("Entity out of range");
+
                 return _signatures[entity];
             }
 
@@ -270,7 +280,8 @@ namespace ECS{
             template<typename T, typename... _Args> std::shared_ptr<T> RegisterSystem(_Args&&... __args) {
                 const char* typeName = typeid(T).name();
 
-                assert(mSystems.find(typeName) == mSystems.end() && "Registering system more than once.");
+				if (mSystems.find(typeName) != mSystems.end())
+					throw std::runtime_error("Registering system more than once.");
 
                 // Create a pointer to the system and return it so it can be used externally
                 auto system = std::make_shared<T>(std::forward<_Args>(__args)...);
@@ -281,7 +292,9 @@ namespace ECS{
             template<typename T> void SetSignature(Signature signature){
                 const char* typeName = typeid(T).name();
 
-                assert(mSystems.find(typeName) != mSystems.end() && "System used before registered.");
+				if (mSystems.find(typeName) == mSystems.end())
+					throw std::runtime_error("System used before registered.");
+
 
                 // Set the signature for this system
                 mSignatures.insert({typeName, signature});

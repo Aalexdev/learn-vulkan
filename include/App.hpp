@@ -37,4 +37,8 @@ class App{
 
         std::unique_ptr<DescriptorPool> globalPool{};
         ECS::Coordinator coordinator{};
+
+		// ! test function
+		void pushEntiy();
+		std::shared_ptr<VKE::Model> model;
 };

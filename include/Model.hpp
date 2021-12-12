@@ -19,6 +19,8 @@
 namespace VKE{
     class Model{
         public:
+			static constexpr glm::vec3 MODEL_NON_CUSTOM_COLOR = glm::vec3(2.f);
+
             struct Vertex{
                 glm::vec3 position{};
                 glm::vec3 color{};
@@ -37,7 +39,7 @@ namespace VKE{
                 std::vector<Vertex> vertices{};
                 std::vector<uint32_t> indices{};
 
-                void loadModel(const std::string &filepath);
+                void loadModel(const std::string &filepath, glm::vec3 color = MODEL_NON_CUSTOM_COLOR);
             };
 
             Model(Device &device, const Model::Builder& builder);

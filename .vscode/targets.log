@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Sat Dec 11 23:35:44 2021
+# Make data base, printed on Sun Dec 12 17:52:24 2021
 
 # Variables
 
@@ -19,16 +19,16 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # makefile (from `makefile', line 5)
 OBJ = $(addprefix obj/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
 # makefile (from `makefile', line 4)
-SRC = $(wildcard src/*.cpp) $(wildcard src/*/*.cpp) $(wildcard src/*/*/*.cpp)
+SRC = $(wildcard src/*.cpp) $(wildcard src/*/*.cpp) $(wildcard src/*/*/*.cpp) $(wildcard src/*/*/*/*.cpp)
 # makefile
 MAKEFLAGS = Rrqp
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# automatic
-@D = $(patsubst %/,%,$ 
-(dir $@))
+# auto 
+matic
+@D = $(patsubst %/,%,$(dir $@))
 # environment
 HOMEDRIVE = C:
 # automatic
@@ -64,12 +64,12 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-e6d14ac1-2873-4de0-bcbe-4ca1455a1943-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-b006d1d1-fb0b-4931-bdec-b68adeea0217-sock
 # environment
-VSCODE_CWD = D:\dev\Vulkan\gravity test
+VSCODE_CWD = D:\programs\Microsoft VS Code
 # environment
-PATH = D:\vulkan\Bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\MinGW\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin;C:\Users\aalex\AppData\Local\bin\NASM;D:\golink;D:\programs\CMake\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aalex\AppData\Local\GitHubDesktop\bin;C:\Users\aalex\.dotnet\tools;c:\python27;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin;D:\programs\Mic 
-rosoft VS Code\bin;D:\vulkan\Bin;
+PATH = D:\vulkan\Bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\MinGW\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin;C:\Users\aalex\AppData\Local\bin\NASM;D:\golink;D:\programs\CMake\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aalex\AppData\Local\GitHubDesktop\bin;C:\Users\aalex\.dotnet\tools;c:\python27;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\aalex\AppData\Local\Microsoft\WindowsApps;D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0 
+-r1\mingw32\bin;D:\programs\Microsoft VS Code\bin;D:\vulkan\Bin;
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
@@ -93,7 +93,7 @@ VK_SDK_PATH = D:\vulkan
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18112_LRYYFDDJQJZDWJHG
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16812_BBTKZWATCAQCSSEE
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -109,8 +109,8 @@ USERNAME = aalex
 # environment
 PUBLIC = C:\Users\Public
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/ex 
-tensions/node/extensionHostProcess
+VSCODE_AMD_ENTRYP 
+OINT = vs/workbench/services/extensions/node/extensionHostProcess
 # makefile (from `makefile', line 9)
 DEFINES = -D DEBUG
 # environment
@@ -124,7 +124,8 @@ LOGONSERVER = \\LAPTOP-63807G6E
 # environment
 ONEDRIVECONSUMER = C:\Users\aalex\OneDrive
 # environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+VSCODE_HAND 
+LES_UNCAUGHT_ERRORS = true
 # environment
 USERDOMAIN = LAPTOP-63807G6E
 # default
@@ -147,9 +148,9 @@ PROGRAMFILES(X86) = C:\Program Files (x86)
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 LOCALAPPDATA = C:\Users\aalex\AppData\Local
-# environment
-PSMODULEPATH = C:\Pro 
-gram Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# en 
+vironment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # environment
@@ -188,9 +189,9 @@ NASM = C:\Users\aalex\AppData\Local\bin\NASM\nasm.exe
 APPDATA = C:\Users\aalex\AppData\Roaming
 # environment
 TEMP = C:\Users\aalex\AppData\Local\Temp
+ 
 # environment
-COMSPEC = C:\WIND 
-OWS\system32\cmd.exe
+COMSPEC = C:\WINDOWS\system32\cmd.exe
 # default
 MAKEFILES := 
 # automatic
@@ -212,10 +213,10 @@ SESSIONNAME = Console
 # environment
 PROCESSOR_REVISION = 1801
 # environment
-VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1
+VBOX_HWVIRTEX_IGNORE_SVM_ 
+IN_USE = 1
 # environment
-MAKELE 
-VEL := 0
+MAKELEVEL := 0
 # environment
 VULKAN_SDK = D:\vulkan
 # environment
@@ -225,11 +226,11 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 18112
+VSCODE_PID = 16812
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-63807G6E
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=14/140=10%
+# Load=105/1024=10%, Rehash=0, Collisions=14/137=10%
 
 # Pattern-specific Variable Values
 
@@ -237,47 +238,55 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-63807G6E
 
 # Directories
 
-# C:\Users\aalex\AppData\Local\Programs\Microsoft VS Code\bin: could not be stat'd.
+# C:\Users\aalex\AppData\Local\Programs\Mic 
+rosoft VS Code\bin: could not be stat'd.
+# src/ECS/components/ECS_Transform.cpp (key d:/dev/Vulkan/gravity test/src/ECS/components/ECS_Transform.cpp, mtime 1639215786): could not be opened.
 # src/*/*: could not be stat'd.
+# src/ECS/systems/ECS_GravitySys.cpp (key d:/dev/Vulkan/gravity test/src/ECS/systems/ECS_GravitySys.cpp, mtime 1639323972): could not be opened.
 # src/ECS/components (key d:/dev/Vulkan/gravity test/src/ECS/components, mtime 1639262088): 3 files, no impossibilities.
 # C:\Users\aalex\.dotnet\tools: could not be stat'd.
 # src/Buffer.cpp (key d:/dev/Vulkan/gravity test/src/Buffer.cpp, mtime 1638970399): could not be opened.
+# src/physics (key d:/dev/Vulkan/gravity test/src/physics, mtime 1639321251): 3 files, no impossibilities.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1635674840): 32 files, no impossibilities.
-# C:\WINDOWS\System32\Wbem (key C:/WINDOWS/Sys 
-tem32/Wbem, mtime 1622913728): 155 files, no impossibilities.
-# . (key d:/dev/Vulkan/gravity test, mtime 1639262088): 12 files, no impossibilities.
+# C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1622913728): 155 files, no impossibilities.
+# . (key d:/dev/Vu 
+lkan/gravity test, mtime 1639324390): 12 files, no impossibilities.
 # src/keyboardMovementController.cpp (key d:/dev/Vulkan/gravity test/src/keyboardMovementController.cpp, mtime 1638913568): could not be opened.
-# src/App.cpp (key d:/dev/Vulkan/gravity test/src/App.cpp, mtime 1639216133): could not be opened.
-# src/SimpleRenderSystem.cpp (key d:/dev/Vulkan/gravity test/src/SimpleRenderSystem.cpp, mtime 1639173642): could not be 
- opened.
-# src/ECS/systems (key d:/dev/Vulkan/gravity test/src/ECS/systems, mtime 1639262088): 3 files, no impossibilities.
+# src/App.cpp (key d:/dev/Vulkan/gravity test/src/App.cpp, mtime 1639324502): could not be opened.
+# src/SimpleRenderSystem.cpp (key d:/dev/Vulkan/gravity test/src/SimpleRenderSystem.cpp, mtime 1639173642): could not be opened.
+# src/ECS/systems (key d:/dev/Vulkan/gravity test/src/ECS/systems, mtime 1639318442): 5 files, no impossibilities.
 # C:\MinGW\bin\: could not be stat'd.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1632837983): 8 files, no impossibilities.
 # D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin (key D:/dev/compilers/c-cpp/winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1/mingw32/bin, mtime 1633028936): 83 files, no impossibilities.
-# src/GameObject.cpp (key d:/dev/Vulkan/gravity test/src/GameObject.cpp, mtime 1638969321): could not be opened.
+# src/GameObject.cpp (key d:/dev/Vulkan/gravity test/src/GameObject.cpp, mtime 16389693 
+21): could not be opened.
 # C:\Users\aalex\AppData\Local\GitHubDesktop\bin: could not be stat'd.
-# C:\Users\aalex\AppData\Local\Microsoft\WindowsApps (key C:/Users/aalex/AppData/Local/Microsoft/WindowsApps, mtime 1639260824): 41 files, no impossibilities.
+# C:\Users\aalex\AppData\Local\Microsoft\WindowsApps (key C:/Users/aalex/AppData/Local/Microsoft/WindowsApps, mtime 1639323839): 41 files, no impossibilities.
 # src/ECS (key d:/dev/Vulkan/gravity test/src/ECS, mtime 1639262088): 4 files, no impossibilities.
-# src/Camera.cpp (key d:/dev/Vulkan/gravity test/src/Camera.cpp, mtime 163891 
-0266): could not be opened.
+# src/Camera.cpp (key d:/dev/Vulkan/gravity test/src/Camera.cpp, mtime 1638910266): could not be opened.
 # src/Pipeline.cpp (key d:/dev/Vulkan/gravity test/src/Pipeline.cpp, mtime 1639166658): could not be opened.
 # D:\golink (key D:/golink, mtime 1614434330): 6 files, no impossibilities.
 # D:\vulkan\Bin (key D:/vulkan/Bin, mtime 1636735861): 47 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
 # src/Device.cpp (key d:/dev/Vulkan/gravity test/src/Device.cpp, mtime 1638613368): could not be opened.
-# C:\Program Files (x86)\Common Files\Oracle\Java\javapa 
-th (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1630335095): 5 files, no impossibilities.
+# C:\Program Files (x86)\Common Files\Oracle\Java\javapath (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 16303350 
+95): 5 files, no impossibilities.
 # D:\programs\CMake\bin (key D:/programs/CMake/bin, mtime 1619537534): 8 files, no impossibilities.
-# src (key d:/dev/Vulkan/gravity test/src, mtime 1639262088): 17 files, no impossibilities.
-# src/Model.cpp (key d:/dev/Vulkan/gravity test/src/Model.cpp, mtime 1639160591): could not be opened.
-# src/Descriptors.cpp (key d:/dev/Vulkan/gravity test/src/Descriptors.cpp, mtime 1638994150): could not 
- be opened.
+# src (key d:/dev/Vulkan/gravity test/src, mtime 1639321242): 18 files, no impossibilities.
+# src/Model.cpp (key d:/dev/Vulkan/gravity test/src/Model.cpp, mtime 1639306938): could not be opened.
+# src/Descriptors.cpp (key d:/dev/Vulkan/gravity test/src/Descriptors.cpp, mtime 1638994150): could not be opened.
+# src/physics/solvers (key d:/dev/Vulkan/gravity test/src/physics/so 
+lvers, mtime 1639321257): 3 files, no impossibilities.
 # src/*: could not be stat'd.
 # C:\WINDOWS (key C:/WINDOWS, mtime 1638018440): 122 files, no impossibilities.
 # src/SwapChain.cpp (key d:/dev/Vulkan/gravity test/src/SwapChain.cpp, mtime 1638829140): could not be opened.
+# src/ECS/systems/ECS_CollisionDetectionSys.cpp (key d:/dev/Vulkan/gravity test/src/ECS/systems/ECS_CollisionDetectionSys.cpp, mtime 1639322413): could not be opened.
+# src/physics/solvers/ImpulseSolver.cpp (key d:/dev/Vulkan/gravity test/src/physics/solvers/ImpulseSolver.cpp, mtime 1639322321): could not be opened.
+# src/ECS/systems/ECS_RenderSys.cpp (key d:/dev/Vulkan/gravity test/src/ECS/systems/ECS_RenderSys.cpp, mtime 1639215671): could not be opened.
 # C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin (key C:/Program Files/AdoptOpenJDK/jdk-11.0.9.101-hotspot/bin, mtime 1609271408): 126 files, no impossibilities.
-# src/Renderer.cpp (key d:/dev/Vulkan/gravity test/src/Renderer.cpp, mtime 1638829583): could not be opened 
-.
+# src/*/*/*: could not be stat'd.
+# src/Renderer.cpp (key d:/dev/Vulkan/gravity test/src/Renderer.cpp, mtime 163882 
+9583): could not be opened.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1609250127): 8 files, no impossibilities.
 # C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1639213548): 2994 files, no impossibilities.
 # D:\programs\Microsoft VS Code\bin (key D:/programs/Microsoft VS Code/bin, mtime 1639072732): 4 files, no impossibilities.
@@ -286,10 +295,10 @@ th (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 16303350
 # C:\Users\aalex\AppData\Local\bin\NASM (key C:/Users/aalex/AppData/Local/bin/NASM, mtime 1614432989): 18 files, no impossibilities.
 # src/Window.cpp (key d:/dev/Vulkan/gravity test/src/Window.cpp, mtime 1638642877): could not be opened.
 # D:\cmake-3.19.3-win64-x64\cmake-3.19.3-win64-x64\bin (key D:/cmake-3.19.3-win64-x64/cmake-3.19.3-win64-x64/bin, mtime 1611079901): 7 files, no impossibilities.
-# C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1619552893): 5 files, no  
-impossibilities.
+# C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 
+ 1619552893): 5 files, no impossibilities.
 
-# 3726 files, no impossibilities in 44 directories.
+# 3735 files, no impossibilities in 52 directories.
 
 # Implicit Rules
 
@@ -311,101 +320,64 @@ obj/%.o: src/*/*/%.cpp
 	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 	
 
-# 3 implicit rules, 0 (0.0%) terminal.
-
-# Files
-
-obj/Buffer.o: src/Buffer.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Buffer'
-#  Last modified 2021-12-10 22:39:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $ 
-@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-clear:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `makefile', line 33):
-	@del obj\*.o
-	
-
-obj/ECS_RenderSys.o: src/ECS/systems/ECS_RenderSys.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ECS_RenderSys'
-#  Last modified 2021-12-11 10:45:23
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Co 
-llisions=0/0=0%
-#  commands to execute (from `makefile', line 22):
+obj/%.o: src/*/*/*/%.cpp
+#  commands to execute (from `makefile', line 26):
 	@echo compile $@ from $<
 	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 	
 
+# 4 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
 # Not a target:
-src/Device.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-04 11:22:48
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/Buffer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clear:
+#  Implicit rule search has not been done 
+.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 37):
+	@del obj\*.o
+	
+
+# Not a target:
+obj/ECS_RenderSys.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: prog
 #  Command-line target.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has been 
- updated.
+#  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
-
-obj/GameObject.o: src/GameObject.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `GameObject'
-#  Last modified 2021-12-10 22:39:26
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERS 
-ION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
+# Load=0/32=0%, Rehash=0, Collisions= 
+0/6=0%
 
 # Not a target:
-src/Descriptors.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-08 21:09:10
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/GameObject.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-obj/Camera.o: src/Camera.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Camera'
-#  Last modified 2021-12-10 22:39:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table s 
-tats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
+# Not a target:
+obj/Camera.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ECS_GravitySys.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -413,191 +385,80 @@ tats:
 #  Modification time never checked.
 #  File has not been updated.
 
-obj/ECS_Transform.o: src/ECS/components/ECS_Transform.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ECS_Transform'
-#  Last modified 2021-12-11 10:45:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 22):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
+# Not a target:
+obj/ECS_Transform.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/ECS/components/ECS_Transform.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-11 10:43:06
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-obj/main.o: src/main.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `main'
-#  Last modified 2021-12-10 22:39:29
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-# Not a target:
-src/keyboardMovementController.cpp:
-#  Implicit rule sear 
-ch has been done.
-#  Last modified 2021-12-07 22:46:08
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/App.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2021-12-11 10:48:53
+#  Last modified 2021-12-12 16:55:02
 #  File has been updated.
 #  Successfully updated.
-# variable set hash-table stats:
+# varia 
+ble set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-src/SimpleRenderSystem.cpp:
-#  Implicit rule search has been done.
-#  Last mod 
-ified 2021-12-10 23:00:42
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/ECS_CollisionDetectionSys.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-12-04 14:49:43
+#  Last modified 2021-12-12 14:56:32
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-obj/Model.o: src/Model.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Model'
-#  Last modified 20 
-21-12-10 22:39:37
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
 
 # Not a target:
-src/SwapChain.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-06 23:19:00
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, 
- Collisions=0/0=0%
+obj/Model.o:
+#  Implicit rule searc 
+h has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-prog: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
+prog: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_CollisionDetectionSys.o obj/ECS_GravitySys.o obj/ECS_RenderSys.o obj/ImpulseSolver.o
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: `'
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := prog
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
-# automatic
-# | := 
-# automatic
-# < := obj/App.o
-# automatic
-# ^ := obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
-# automatic
-# ? := obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=4/17=24%
-#  commands to execute (from `makefile' 
-, line 26):
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  commands to execute (from `makefile', line 30):
 	@$(CXX) -time -std=$(STD_VERSION) obj/*.o -I $(INCLUDE) -L $(LIB) -o $(EXEC) $(CFLAGS) $(DEFINES)
 	@echo compiling finish with success
 	
 
 # Not a target:
-src/Pipeline.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-10 21:04:18
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-obj/Renderer.o: src/Renderer.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Renderer'
-#  Last modified 2021-12-10 22:39:39
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-obj/Window.o: src/Window.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Window'
-#  Last modified 2021-12-10 22:39:41
-#  File has been updated.
-#  Successfully updated.
-# variabl 
-e set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-obj/Pipeline.o: src/Pipeline.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Pipeline'
-#  Last modified 2021-12-10 22:39:38
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to ex 
-ecute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
+obj/Renderer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-src/Buffer.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-08 14:33:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/Window.o:
+#  Implicit rule search h 
+as not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/Pipeline.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -605,181 +466,100 @@ src/Buffer.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a t 
-arget:
-src/Window.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-04 19:34:37
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 # Not a target:
-src/GameObject.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-08 14:15:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/Camera.cpp:
-#  Implicit 
- rule search has been done.
-#  Last modified 2021-12-07 21:51:06
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-obj/Device.o: src/Device.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Device'
-#  Last modified 2021-12-10 22:39:24
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-obj/Descriptors.o: src/Descriptors.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `Descriptors'
-#  Last modified 2021-12-10 22:39:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< - 
-I $(INCLUDE) $(DEFINES)
-	
-
-# Not a target:
-src/ECS/systems/ECS_RenderSys.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-11 10:41:11
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/main.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-09 22:23:53
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-dbg: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_RenderSys.o
+obj/Device.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 30):
-	$(CXX) -std=$(STD_VERSION) -g3 $(SRC) -I $(INCLUDE) -L $(LIB) -o $(EXEC) $(C 
-FLAGS) $(DEFINES)
+
+# Not a target:
+obj/Descriptors.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/ImpulseSolver.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+dbg: obj/App.o obj/Buffer.o obj/Camera.o obj/Descriptors.o obj/Device.o obj/GameObject.o obj/keyboardMovementController.o obj/main.o obj/Model.o obj/Pipeline.o obj/Renderer.o obj/SimpleRenderSystem.o obj/SwapChain.o obj/Window.o obj/ECS_Transform.o obj/ECS_CollisionDetectionSys.o obj/ECS_GravitySys.o obj/ECS_RenderSys.o obj/ImpulseSolver.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 34):
+	$(CXX) -std=$(STD_VERSION) -g3 $(SRC) -I $(INCLUDE) -L $(LIB) -o $(EXEC) $(CFLAGS) $(DEFINES)
 	
 
-obj/keyboardMovementController.o: src/keyboardMovementController.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `keyboardMovementController'
-#  Last modified 2021-12-10 22:39:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
+# Not a target:
+obj/keyboardMovementController.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has 
+ not been updated.
 
-obj/App.o: 
- src/App.cpp
+obj/App.o: src/App.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `App'
-#  Last modified 2021-12-11 12:32:38
+#  Last modified 2021-12-12 16:53:10
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/App.o
+# automatic
+# % := 
+# automatic
+# * := App
+# automatic
+# + := src/App.cpp
+# automatic
+# | := 
+# automatic
+# < := src/App.cpp
+# automatic
+# ^ := src/App.cpp
+# automatic
+# ? := src/App.cpp
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-obj/SimpleRenderSystem.o: src/SimpleRenderSystem.cpp
-#  Implicit rule search has been done.
-#  Implicit/static 
- pattern stem: `SimpleRenderSystem'
-#  Last modified 2021-12-10 23:00:48
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `makefile', line 14):
-	@echo compile $@ from $<
-	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
-	
-
-# Not a target:
-src/Model.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-10 19:23:11
-#  File has been updated.
-#  Successfully updated.
-# varia 
-ble set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-obj/SwapChain.o: src/SwapChain.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `SwapChain'
-#  Last modified 2021-12-10 22:39:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=8/32=25%, Rehash=0, Collisions=2/18= 
+11%
 #  commands to execute (from `makefile', line 14):
 	@echo compile $@ from $<
 	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 	
 
 # Not a target:
-src/Renderer.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-06 23:26:23
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/SimpleRenderSystem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/SwapChain.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 info:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 36):
+#  commands to execute (from `makefile', line 40):
 	@echo -----------------------------------------------------
 	@echo compiling info :                
-	@echo 	compiler  
-                    : $(CXX)
+	@echo 	compiler                     : $(CXX)
 	@echo 	compiler standart version    : $(STD_VERSION)
 	@echo 	include path                 : $(INCLUDE)
 	@echo 	flags                        : $(FLAGS)
 	@echo 	libs directory               : $(LIB)
 	@echo 	executable output            : $(EXEC)
-	@echo -----------------------------------------------------
+	@echo -------------- 
+---------------------------------------
 	
 
 # files hash-table stats:
-# Load=40/1024=4%, Rehash=0, Collisions=9/138=7%
+# Load=28/1024=3%, Rehash=0, Collisions=4/82=5%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -791,6 +571,6 @@ info:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Dec 11 23:35:44 2021
+# Finished Make data base on Sun Dec 12 17:52:24 2021
 
  

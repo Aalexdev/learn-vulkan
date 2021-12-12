@@ -1,7 +1,7 @@
 CXX = D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe
 STD_VERSION = c++17
 EXEC = prog
-SRC = $(wildcard src/*.cpp) $(wildcard src/*/*.cpp) $(wildcard src/*/*/*.cpp)
+SRC = $(wildcard src/*.cpp) $(wildcard src/*/*.cpp) $(wildcard src/*/*/*.cpp) $(wildcard src/*/*/*/*.cpp)
 OBJ = $(addprefix obj/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
 LIB = libs/
 INCLUDE = include/
@@ -19,6 +19,10 @@ obj/%.o : src/*/%.cpp
 	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 
 obj/%.o : src/*/*/%.cpp
+	@echo compile $@ from $<
+	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
+
+obj/%.o : src/*/*/*/%.cpp
 	@echo compile $@ from $<
 	@$(CXX) -std=$(STD_VERSION) -o $@ -c $< -I $(INCLUDE) $(DEFINES)
 

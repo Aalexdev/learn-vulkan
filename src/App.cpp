@@ -6,9 +6,16 @@
 
 #include "ECS/components/ECS_Model.hpp"
 #include "ECS/components/ECS_Transform.hpp"
+#include "ECS/components/ECS_RigidBody.hpp"
+#include "ECS/components/ECS_Collider.hpp"
+
+#include "ECS/systems/ECS_GravitySys.hpp"
+#include "ECS/systems/ECS_RenderSys.hpp"
+#include "ECS/systems/ECS_CollisionsDetectionSys.hpp"
 
 // std
 #include <stdexcept>
+#include <random>
 #include <chrono>
 #include <cmath>
 #include <array>
@@ -22,7 +29,7 @@
 
 struct GlobalUBO{
     glm::mat4 projectionView{1.f};
-    glm::vec4 ambientLight{glm::vec3(1.f), .02f};
+    glm::vec4 ambientLight{glm::vec3(1.f), 0.02f};
     glm::vec3 lightPositon{-1.f};
     alignas(16) glm::vec4 lightColor{1.f};
 };
@@ -32,7 +39,8 @@ App::App(){
         .setMaxSets(SwapChain::MAX_FRAMES_IN_FLIGHT)
         .addPoolSize(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, SwapChain::MAX_FRAMES_IN_FLIGHT)
         .build();
-    
+	
+	model = VKE::Model::createModelFromFile(device, "D:\\dev\\Vulkan\\gravity test\\resources\\models\\sphere.obj");
 }
 
 App::~App(){}
@@ -56,13 +64,30 @@ void App::run(){
 
     coordinator.RegisterComponent<ECS::Components::Model>();
     coordinator.RegisterComponent<ECS::Components::Transform>();
+	coordinator.RegisterComponent<ECS::Components::RigidBody>();
+	coordinator.RegisterComponent<ECS::Components::Collider>();
 
     auto renderSystem = coordinator.RegisterSystem<ECS::Systems::Renderer>(device, renderer.getSwapChainRenderPass(), globalSetLayout->getDescriptorSetLayout());
 
-    ECS::Signature signature;
-    signature.set(coordinator.GetComponentType<ECS::Components::Model>());
-    signature.set(coordinator.GetComponentType<ECS::Components::Transform>());
-    coordinator.SetSystemSignature<ECS::Systems::Renderer>(signature);
+    ECS::Signature renderSignature;
+    renderSignature.set(coordinator.GetComponentType<ECS::Components::Model>());
+    renderSignature.set(coordinator.GetComponentType<ECS::Components::Transform>());
+    coordinator.SetSystemSignature<ECS::Systems::Renderer>(renderSignature);
+
+	auto gravitySystem = coordinator.RegisterSystem<ECS::Systems::Gravity>();
+	ECS::Signature gravitySignature;
+
+	gravitySignature.set(coordinator.GetComponentType<ECS::Components::RigidBody>());
+    coordinator.SetSystemSignature<ECS::Systems::Gravity>(gravitySignature);
+
+	auto CollisionsSystem = coordinator.RegisterSystem<ECS::Systems::CollisionDetection>();
+	ECS::Signature collisionSignature;
+
+	collisionSignature.set(coordinator.GetComponentType<ECS::Components::RigidBody>());
+	collisionSignature.set(coordinator.GetComponentType<ECS::Components::Collider>());
+	collisionSignature.set(coordinator.GetComponentType<ECS::Components::Transform>());
+
+    coordinator.SetSystemSignature<ECS::Systems::CollisionDetection>(collisionSignature);
 
     loadGameObjects();
 
@@ -90,6 +115,11 @@ void App::run(){
         float aspect = renderer.getAspectRatio();
         camera.setPerspectivProjection(glm::radians(50.f), aspect, 0.1f, 100.f);
 
+		// event
+		// if (glfwGetKey(window.getGLFWwindow(), GLFW_KEY_))
+		if (glfwGetMouseButton(window.getGLFWwindow(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+			pushEntiy();
+
         if (auto commandBuffer = renderer.beginFrame()){
             int frameIndex = renderer.getFrameIndex();
             FrameInfo frameInfo{frameIndex, deltaTick, commandBuffer, camera, globalDescriptorSets[frameIndex], coordinator};
@@ -97,7 +127,10 @@ void App::run(){
             // update
             GlobalUBO ubo{};
             ubo.projectionView = camera.getProjection() * camera.getView();
-            ubo.lightPositon = viewerGameObject.transform.translation;
+            // ubo.lightPositon = viewerGameObject.transform.translation;
+
+			gravitySystem->update(frameInfo);
+			CollisionsSystem->update(frameInfo);
 
             // send ubo to the uniform buffer
             uboBuffers[frameIndex]->writeToBuffer(&ubo);
@@ -115,21 +148,38 @@ void App::run(){
 }
 
 void App::loadGameObjects(){
-    std::shared_ptr<VKE::Model> model = VKE::Model::createModelFromFile(device, "D:\\dev\\Vulkan\\ECS test\\resources\\models\\smooth_vase.obj");
+	std::shared_ptr<VKE::Model> quadModel = VKE::Model::createModelFromFile(device, "resources\\models\\quad.obj");
 
-    auto entity = coordinator.CreateEntity();
+	auto quad = coordinator.CreateEntity();
+	coordinator.AddComponent(quad, ECS::Components::Model{quadModel});
+    coordinator.AddComponent(quad, ECS::Components::RigidBody{});
+    coordinator.AddComponent(quad, ECS::Components::Transform{.translation=glm::vec3(0.f, 1.f, 0.f), .scale=glm::vec3(10.f)});
+	coordinator.AddComponent(quad, ECS::Components::Collider{});
+}
+
+void App::pushEntiy(){
+
+	ECS::Entity entity;
+	try {
+		entity = coordinator.CreateEntity();
+	} catch (const std::exception &){
+		return;
+	}
     ECS::Components::Transform transform{};
-    transform.translation = {0.f, 0.f, .5f};
-    transform.scale = {3.f, 1.5f, 3.f};
+    transform.translation = {0.f, 0.f, 1.5f};
+    transform.scale = glm::vec3(0.2f);
 
+	ECS::Components::RigidBody rigidBody{};
+	rigidBody.mass = 1.f;
+	rigidBody.velocity = glm::vec3(rand() % 3000 / 1000.f + 2.f);
+	rigidBody.velocity.y *= -1;
+	rigidBody.force = glm::vec3(0.f);
+	rigidBody.isDynamic = true;
+	
+	Physics::Collisions::SphereCollider collider{};
+	
+	coordinator.AddComponent(entity, ECS::Components::Collider{});
     coordinator.AddComponent(entity, ECS::Components::Model{model});
     coordinator.AddComponent(entity, transform);
-
-    auto vase2 = coordinator.CreateEntity();
-    ECS::Components::Transform transform2{};
-    transform2.translation = {0.f, 0.f, 1.5f};
-    transform2.scale = {3.f, 1.5f, 3.f};
-    
-    coordinator.AddComponent(vase2, ECS::Components::Model{model});
-    coordinator.AddComponent(vase2, transform2);
+    coordinator.AddComponent(entity, rigidBody);
 }

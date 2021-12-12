@@ -30,8 +30,14 @@ echo compile obj/Window.o from src/Window.cpp
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/Window.o -c src/Window.cpp -I include/ -D DEBUG
 echo compile obj/ECS_Transform.o from src/ECS/components/ECS_Transform.cpp
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ECS_Transform.o -c src/ECS/components/ECS_Transform.cpp -I include/ -D DEBUG
+echo compile obj/ECS_CollisionDetectionSys.o from src/ECS/systems/ECS_CollisionDetectionSys.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ECS_CollisionDetectionSys.o -c src/ECS/systems/ECS_CollisionDetectionSys.cpp -I include/ -D DEBUG
+echo compile obj/ECS_GravitySys.o from src/ECS/systems/ECS_GravitySys.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ECS_GravitySys.o -c src/ECS/systems/ECS_GravitySys.cpp -I include/ -D DEBUG
 echo compile obj/ECS_RenderSys.o from src/ECS/systems/ECS_RenderSys.cpp
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ECS_RenderSys.o -c src/ECS/systems/ECS_RenderSys.cpp -I include/ -D DEBUG
+echo compile obj/ImpulseSolver.o from src/physics/solvers/ImpulseSolver.cpp
+D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -std=c++17 -o obj/ImpulseSolver.o -c src/physics/solvers/ImpulseSolver.cpp -I include/ -D DEBUG
 D:\dev\compilers\c-cpp\winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r1\mingw32\bin\g++.exe -time -std=c++17 obj/*.o -I include/ -L libs/ -o prog -l mingw32 -l glfw3 -lgdi32 -lvulkan-1 -D DEBUG
 echo compiling finish with success
 make.exe: Leaving directory `d:/dev/Vulkan/gravity test'
